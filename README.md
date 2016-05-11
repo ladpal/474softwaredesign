@@ -6,10 +6,10 @@ Create a root folder and place an empty HTML file named 'index.html'.
 Inside root, create folder 'js' and place stackBarChart.js inside.
 
 In the head of index.html, refer to stackBarChart.js as 
-<script type="text/javascript" src="./js/stackBarChart.js"></script>
+`<script type="text/javascript" src="./js/stackBarChart.js"></script>`
 
 and the d3 library as 
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+`<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>`
 
 
 Inside the body of index.html, create script tags and create an instance
@@ -35,6 +35,7 @@ The .csv file must satisfy the following conditions:
   The first row should consist of text that describes the meaning of the columns
 
 * No missing values
+
 
 ## stackBarChart.createGraph()
 Displays a stacked bar chart of the .csv data on an empty HTML page.
