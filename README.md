@@ -29,13 +29,16 @@ foo.FileGlobal("./js/bar.csv");
 The .csv file must satisfy the following conditions:
 
 * Every row of data is equal to a whole bar in the chart, each individual
-  column in a row corresponds to the length of the "sub-bar."
+  value in the column corresponds to the length of the "sub-bar."
  
 * All values are numerical, with the exception of the first row. 
   The first row should consist of text that describes the meaning of the columns
+  Otherwise, non-numerical columns may be removed. 
 
 * No missing values
 
+Files may be modified or created from different file formats so long as they
+conform to standard .csv formatting `https://en.wikipedia.org/wiki/Comma-separated_values#Example`
 
 ## stackBarChart.createGraph()
 Displays a stacked bar chart of the .csv data on an empty HTML page.
