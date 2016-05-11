@@ -3,7 +3,7 @@ This javascript function creates a stacked bar chart from a .csv file
 
 ## Instructions
 Create a root folder and place an empty HTML file named 'index.html'.
-Inside root, create folder 'js' and place stackBarChart.js inside.
+Inside root the root folder, create new folder 'js' and place stackBarChart.js inside the 'js' folder.
 
 In the head of index.html, refer to stackBarChart.js as 
 `<script type="text/javascript" src="./js/stackBarChart.js"></script>`
@@ -22,25 +22,23 @@ Function to specify the name and location of the .csv file to populate
 the chart.
 
 filepath: Full filepath of .csv file as a string. Filepath is relative to
-the index.html file. For example, a .csv file in the 'js' folder would be
-
-foo.FileGlobal("./js/bar.csv");
+the index.html file. For example, a .csv file in the 'js' folder would be `foo.FileGlobal("./js/bar.csv");`
 
 The .csv file must satisfy the following conditions:
 
 * Every row of data is equal to a whole bar in the chart, each individual
-  value in the column corresponds to the length of the "sub-bar."
+  value in a column corresponds to the length of the "sub-bar."
  
 * All values are numerical, with the exception of the first row. 
-  The first row should consist of text that describes the meaning of the columns
-  Otherwise, non-numerical columns may be removed. 
+  The first row should consist of text that describes the meaning of the columns.
+  Otherwise, non-numerical columns should be removed. 
 
 * No missing values
 
 Files may be modified or created from different file formats so long as they
 conform to standard .csv formatting `https://en.wikipedia.org/wiki/Comma-separated_values#Example`
 
-## stackBarChart.createGraph()
+## stackBarChart.displayGraph()
 Displays a stacked bar chart of the .csv data on an empty HTML page.
 Nothing will be displayed in the event of an improperly formatted or 
 improperly referred .csv file.
@@ -53,14 +51,14 @@ on the screen.
 ## stackBarChart.Width(num)
 Specifies the width of the chart. 500 by default.
 
-num: New width for the chart, in pixels. 
+num: New width for the chart, in pixels. If num is not passed, returns the current Width. 
 
 ## stackBarChart.Height(num)
 Specifies the height of the chart. 500 by default.
 
-num: New height for the chart, in pixels. 
+num: New height for the chart, in pixels. If num is not passed, returns the current Height.
 
 ## stackBarChart.Padding(num)
-Specifies the amount of padding between bars. 0.1 by deault.
+Specifies the amount of padding between bars. 0.1 by default.
 
-num: New amount of padding between bars, in pixels.
+num: New amount of padding between bars, in pixels. If num is not passed, returns the current padding.
